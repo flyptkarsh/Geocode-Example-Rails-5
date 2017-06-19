@@ -8,7 +8,6 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Map</th>
       <th>Name</th>
       <th>Latitude</th>
       <th>Longitude</th>
@@ -18,8 +17,7 @@
   <tbody id="locationsTable">
     <% @locations.each do |location| %>
       <tr>
-        <td><img src="https://maps.googleapis.com/maps/api/staticmap?center=<%= location.latitude %>,<%= location.longitude %>&zoom=10&scale=1&size=200x200&maptype=roadmap&format=png&visual_refresh=true"></td>
-        <td><%= location.name %></td>
+        <td><%= location.name.titleize %></td>
         <td><%= location.latitude %></td>
         <td><%= location.longitude %></td>
       </tr>
